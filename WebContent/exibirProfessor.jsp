@@ -19,7 +19,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% 
+	<% 
 switch(professor.getTitulacao()){
 case 1:
 	titulacao = "especialização";
@@ -34,19 +34,38 @@ case 3:
 %>
 
 
-<h1>Professor: <%= professor.getNome() %></h1><br/>
-<h1>Nome da mãe:  <%= professor.getNomemae() %></h1><br/>
-<h1>Titulação:  <%= titulacao %></h1><br/>
-<h1>Disciplinas:</h1><br/>
-<table>
-<% for(int i =0; i < disciplinas.size(); i++){
-	%><tr>Nome: <%= disciplinas.get(i).getNome() %> | Curso: <%= disciplinas.get(i).getCurso() %> | Carga horária: <%= disciplinas.get(i).getCargahoraria() %> </tr><br/><%
+	<h1>
+		Professor:
+		<%= professor.getNome() %></h1>
+	<br />
+	<h1>
+		Nome da mãe:
+		<%= professor.getNomemae() %></h1>
+	<br />
+	<h1>
+		Titulação:
+		<%= titulacao %></h1>
+	<br />
+	<h1>Disciplinas:</h1>
+	<br />
+	<table>
+		<% for(int i =0; i < disciplinas.size(); i++){
+	%><tr>
+			Nome:
+			<%= disciplinas.get(i).getNome() %>
+			| Curso:
+			<%= disciplinas.get(i).getCurso() %>
+			| Carga horária:
+			<%= disciplinas.get(i).getCargahoraria() %>
+		</tr>
+		<br />
+		<%
 }
 %>
 
 
 
 
-</table>
+	</table>
 </body>
 </html>
