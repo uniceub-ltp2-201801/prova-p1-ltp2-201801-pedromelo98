@@ -46,6 +46,7 @@ case 3:
 		Titulação:
 		<%= titulacao %></h1>
 	<br />
+	<h1>Data de nascimento: <%=  professor.getDatanasc().toLocaleString() %> </h1><br/>
 	<h1>Disciplinas:</h1>
 	<br />
 	<table>
